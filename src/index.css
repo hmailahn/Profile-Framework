@@ -1,0 +1,342 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* Raw Brand Colors */
+  --brand-teal: 37, 210, 209;
+  --brand-sky-blue: 42, 149, 215;
+  --brand-medium-blue: 29, 112, 177;
+  --brand-soft-blue: 74, 140, 195;
+  --brand-deep-blue: 20, 62, 111;
+  --brand-navy-dark: 6, 31, 70;
+
+  /* Neutrals (Derived from brand) */
+  --color-app-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f7f9fc;
+  --color-elevated: #ffffff;
+  --color-border: rgba(var(--brand-soft-blue), 0.35);
+  --color-border-strong: rgba(var(--brand-soft-blue), 0.5);
+  --color-shadow: rgba(var(--brand-deep-blue), 0.18);
+
+  /* Text (Derived from brand) */
+  --color-text: rgb(var(--brand-navy-dark));
+  --color-text-muted: rgb(var(--brand-deep-blue));
+  --color-text-subtle: rgb(var(--brand-soft-blue));
+  --color-text-inverse: #f7f9fc;
+
+  /* Primary (Sky Blue) */
+  --color-primary: rgb(var(--brand-sky-blue));
+  --color-primary-soft: rgba(var(--brand-sky-blue), 0.12);
+  --color-primary-border: rgba(var(--brand-sky-blue), 0.35);
+  --color-primary-strong: rgb(var(--brand-medium-blue));
+
+  /* Accent (Teal) */
+  --color-accent: rgb(var(--brand-teal));
+  --color-accent-soft: rgba(var(--brand-teal), 0.12);
+  --color-accent-border: rgba(var(--brand-teal), 0.35);
+  --color-accent-strong: rgb(30, 178, 177);
+
+  --color-bg-amber: var(--color-app-bg);
+  --gradient-from: var(--color-primary);
+  --gradient-to: var(--color-primary-strong);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Dark Mode - Black & Deep Purple */
+  --color-app-bg: #0a0a0f;
+  --color-surface: #16161d;
+  --color-surface-muted: #1e1e28;
+  --color-elevated: #26263a;
+  --color-border: rgba(139, 92, 246, 0.2);
+  --color-border-strong: rgba(139, 92, 246, 0.35);
+  --color-shadow: rgba(0, 0, 0, 0.9);
+
+  /* Text */
+  --color-text: #e9e9f0;
+  --color-text-muted: #b4b4c8;
+  --color-text-subtle: #8b8b9e;
+  --color-text-inverse: #0a0a0f;
+
+  /* Primary - Deep Purple */
+  --color-primary: #a78bfa;
+  --color-primary-soft: rgba(167, 139, 250, 0.15);
+  --color-primary-border: rgba(167, 139, 250, 0.4);
+  --color-primary-strong: #c4b5fd;
+
+  /* Accent */
+  --color-accent: #c084fc;
+  --color-accent-soft: rgba(192, 132, 252, 0.15);
+  --color-accent-border: rgba(192, 132, 252, 0.4);
+  --color-accent-strong: #d8b4fe;
+
+  --color-bg-amber: var(--color-app-bg);
+  --gradient-from: var(--color-primary);
+  --gradient-to: var(--color-accent);
+}
+
+[data-theme='cool'] {
+  color-scheme: dark;
+
+  /* Cool Mode - Blue-tinted (original dark) */
+  --brand-teal: 37, 210, 209;
+  --brand-sky-blue: 42, 149, 215;
+  --brand-medium-blue: 29, 112, 177;
+  --brand-soft-blue: 74, 140, 195;
+  --brand-deep-blue: 20, 62, 111;
+  --brand-navy-dark: 6, 31, 70;
+
+  --color-app-bg: #010a19;
+  --color-surface: rgba(var(--brand-navy-dark), 0.93);
+  --color-surface-muted: rgba(var(--brand-deep-blue), 0.85);
+  --color-elevated: rgba(var(--brand-medium-blue), 0.5);
+  --color-border: rgba(var(--brand-soft-blue), 0.3);
+  --color-border-strong: rgba(var(--brand-soft-blue), 0.45);
+  --color-shadow: rgba(0, 0, 0, 0.9);
+
+  --color-text: #edf2f7;
+  --color-text-muted: #c0d0e0;
+  --color-text-subtle: rgb(var(--brand-soft-blue));
+  --color-text-inverse: rgb(var(--brand-navy-dark));
+
+  --color-primary: rgb(151, 211, 242);
+  --color-primary-soft: rgba(151, 211, 242, 0.22);
+  --color-primary-border: rgba(151, 211, 242, 0.4);
+  --color-primary-strong: rgb(198, 230, 248);
+
+  --color-accent: rgb(150, 242, 242);
+  --color-accent-soft: rgba(150, 242, 242, 0.22);
+  --color-accent-border: rgba(150, 242, 242, 0.4);
+  --color-accent-strong: rgb(198, 248, 248);
+
+  --color-bg-amber: var(--color-app-bg);
+  --gradient-from: var(--color-primary);
+  --gradient-to: var(--color-accent);
+}
+
+[data-theme='warm'] {
+  color-scheme: dark;
+
+  /* Warm Mode - Autumn Cozy */
+  --color-app-bg: #1a1410;
+  --color-surface: #2a1f18;
+  --color-surface-muted: #342820;
+  --color-elevated: #3d312a;
+  --color-border: rgba(217, 119, 6, 0.25);
+  --color-border-strong: rgba(217, 119, 6, 0.4);
+  --color-shadow: rgba(0, 0, 0, 0.85);
+
+  /* Text - Warm tones */
+  --color-text: #fef3e2;
+  --color-text-muted: #d4c5b0;
+  --color-text-subtle: #a89684;
+  --color-text-inverse: #1a1410;
+
+  /* Primary - Warm Orange/Amber */
+  --color-primary: #fb923c;
+  --color-primary-soft: rgba(251, 146, 60, 0.15);
+  --color-primary-border: rgba(251, 146, 60, 0.4);
+  --color-primary-strong: #fdba74;
+
+  /* Accent - Golden */
+  --color-accent: #fbbf24;
+  --color-accent-soft: rgba(251, 191, 36, 0.15);
+  --color-accent-border: rgba(251, 191, 36, 0.4);
+  --color-accent-strong: #fcd34d;
+
+  --color-bg-amber: var(--color-app-bg);
+  --gradient-from: var(--color-primary);
+  --gradient-to: var(--color-accent);
+}
+
+:root,
+[data-theme] {
+  --primary-soft: var(--color-primary-soft, color-mix(in srgb, var(--color-primary) 18%, transparent));
+  --primary-strong-var: var(--color-primary-strong, var(--color-primary));
+  --primary-border-var: var(--color-primary-border, var(--color-primary));
+  --primary-shadow-50: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  --primary-shadow-30: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* 2. Global styles go directly in the file, no @layer base needed */
+@layer base {
+  body {
+    @apply antialiased;
+    background-color: var(--color-app-bg, #ffffff);
+    color: var(--color-text, #111827);
+    font-family: var(--font-inter);
+    /* overflow-x: hidden; - Removed to fix sticky positioning */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 85%; /* Scaled down for Chrome/Edge */
+    /* overflow-x: hidden; - Removed to fix sticky positioning */
+    -webkit-text-size-adjust: 100%; /* Prevent automatic text resizing */
+    text-size-adjust: 100%;
+  }
+
+  /* Firefox Specific Override */
+  @-moz-document url-prefix() {
+    html {
+      font-size: 100%;
+    }
+  }
+}
+
+/* 3. Custom utility classes */
+@utility text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--gradient-from), var(--gradient-to));
+}
+
+@utility glass {
+  background-color: color-mix(in srgb, var(--color-surface, #ffffff) 92%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+@utility bg-hero {
+  background-image: linear-gradient(135deg, var(--color-app-bg) 0%, var(--color-surface-muted, var(--color-app-bg)) 55%, var(--color-primary-soft, var(--color-primary)) 100%);
+}
+
+@utility hero-fade-top {
+  background-image: linear-gradient(to top, var(--color-app-bg) 0%, var(--color-app-bg) 60%, transparent 100%);
+}
+
+@utility bg-app {
+  background-color: var(--color-app-bg);
+}
+
+@utility bg-surface {
+  background-color: var(--color-surface);
+}
+
+@utility bg-surface-muted {
+  background-color: var(--color-surface-muted);
+}
+
+@utility bg-elevated {
+  background-color: var(--color-elevated);
+}
+
+@utility border-theme {
+  border-color: var(--color-border);
+}
+
+@utility fade-to-app-bottom {
+  background-image: linear-gradient(to bottom, transparent 0%, var(--color-app-bg) 60%, var(--color-app-bg) 100%);
+}
+
+/* Theme-aware overrides for Tailwind primary utility classes */
+[data-theme] .bg-primary-50,
+[data-theme] .bg-primary-100 {
+  background-color: var(--primary-soft) !important;
+}
+
+[data-theme] .bg-primary-500,
+[data-theme] .bg-primary-600 {
+  background-color: var(--color-primary) !important;
+}
+
+[data-theme] .bg-primary-700 {
+  background-color: var(--primary-strong-var) !important;
+}
+
+[data-theme] .hover\:bg-primary-600:hover,
+[data-theme] .dark\:hover\:bg-primary-600:hover {
+  background-color: var(--color-primary) !important;
+}
+
+[data-theme] .hover\:bg-primary-700:hover,
+[data-theme] .dark\:hover\:bg-primary-700:hover {
+  background-color: var(--primary-strong-var) !important;
+}
+
+[data-theme] .hover\:text-white:hover {
+  color: #ffffff !important;
+}
+
+[data-theme] .bg-primary-900\/30,
+[data-theme] .dark\:bg-primary-900\/30 {
+  background-color: color-mix(in srgb, var(--color-primary) 30%, transparent) !important;
+}
+
+[data-theme] .text-primary-400,
+[data-theme] .dark\:text-primary-400 {
+  color: color-mix(in srgb, var(--color-primary) 70%, white) !important;
+}
+
+[data-theme] .text-primary-600,
+[data-theme] .hover\:text-primary-600:hover,
+[data-theme] .dark\:text-primary-600,
+[data-theme] .dark\:hover\:text-primary-600:hover {
+  color: var(--color-primary) !important;
+}
+
+[data-theme] .text-primary-700,
+[data-theme] .hover\:text-primary-700:hover,
+[data-theme] .dark\:text-primary-700,
+[data-theme] .dark\:hover\:text-primary-700:hover {
+  color: var(--primary-strong-var) !important;
+}
+
+[data-theme] .border-primary-600,
+[data-theme] .hover\:border-primary-600:hover,
+[data-theme] .dark\:border-primary-600,
+[data-theme] .dark\:hover\:border-primary-600:hover {
+  border-color: var(--primary-border-var) !important;
+}
+
+[data-theme] .focus\:ring-primary-500:focus,
+[data-theme] .focus\:ring-primary-600:focus {
+  --tw-ring-color: var(--color-primary) !important;
+}
+
+[data-theme] .shadow-primary-500\/50 {
+  --tw-shadow-color: var(--primary-shadow-50) !important;
+  box-shadow: var(--tw-shadow-colored) !important;
+}
+
+[data-theme] .dark\:shadow-primary-900\/30 {
+  --tw-shadow-color: var(--primary-shadow-30) !important;
+  box-shadow: var(--tw-shadow-colored) !important;
+}
+
+[data-theme] .from-primary-100 {
+  --tw-gradient-from: var(--primary-soft) !important;
+  --tw-gradient-to: rgb(255 255 255 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+[data-theme] .dark\:from-primary-900\/30 {
+  --tw-gradient-from: color-mix(in srgb, var(--color-primary) 30%, transparent) !important;
+  --tw-gradient-to: rgb(0 0 0 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+/* 4. Mobile Optimizations */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  section {
+    will-change: contents;
+  }
+}
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
