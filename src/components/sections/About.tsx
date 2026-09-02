@@ -18,6 +18,7 @@ export default function About() {
 
   const stats = [
     { icon: <FiCode />, label: 'Years Experience', value: '4+' },
+    // TO DO: update last 3 
     { icon: <FiCpu />, label: 'Event Processing', value: 'Real-time' },
     { icon: <FiShield />, label: 'Test Coverage', value: '90%+' },
     { icon: <FiActivity />, label: 'System Uptime', value: '99.99%' },

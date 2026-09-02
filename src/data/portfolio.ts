@@ -1,126 +1,117 @@
 import type { Project, Skill, SocialLink, ExperienceItem } from '../types';
-import gmLogo from '../assets/logos/gm.jpg';
-import aztecLogo from '../assets/logos/aztec.png';
-import cozyCookbookImg from '../assets/cozy-cookbook.png';
-import portfolioImg from '../assets/Portfolio.png';
-import analyticsImg from '../assets/AnalyticsDashboard.png';
-import stackedDevImg from '../assets/StackedDev.png';
+
 
 export const projects: Project[] = [
-  {
-    id: '1',
-    title: 'StackDev',
-    description: 'A scalable full-stack learning platform with Kotlin Quarkus backend, GraphQL/gRPC endpoints, Python RAG microservice, and React/Vite TS frontend with Firebase.',
-    detailedDescription: 'Designed and deployed a scalable, full-stack learning platform using a Kotlin Quarkus backend with graphQL and gRPC endpoints. The system integrates a python microservice to handle Vector Database for Retrieval-Augmented Generation (RAG) and uses React/Vite TS with Firebase for secure connections and Firestore real-time persistence. The platform offers free and paid tiers with payments handled through Stripe and PayPal. To optimize performance, it employs a normalized AI questions cache to efficiently handle similar queries.',
-    image: stackedDevImg,
-    tags: ['Kotlin', 'Quarkus', 'GraphQL', 'gRPC', 'Python', 'Vector Database', 'RAG', 'React', 'Vite', 'TypeScript', 'Firebase', 'Firestore'],
-    technologies: [
-      { name: 'Kotlin Quarkus', description: 'Programming language for backend development' },
-      { name: 'GraphQL gRPC', description: 'Query language for APIs and High-performance RPC framework' },
-      { name: 'Python', description: 'Language for the RAG microservice' },
-      { name: 'Vector Database', description: 'Database for storing and retrieving vector embeddings' },
-      { name: 'RAG', description: 'Retrieval-Augmented Generation for AI-powered responses' },
-      { name: 'React TS Vite', description: 'Frontend library for building the user interface' },
-      { name: 'Firebase', description: 'Platform for secure connections and authentication' },
-      { name: 'Firestore', description: 'Real-time NoSQL database' }
-    ],
-    features: ['Scalable full-stack architecture', 'GraphQL and gRPC endpoints', 'Python microservice for RAG', 'Vector database integration', 'Secure Firebase connections', 'Real-time Firestore persistence', 'Free and paid subscription tiers', 'Stripe and PayPal payment integration', 'Normalized AI questions cache for query optimization'],
-    challenges: [
-      {
-        challenge: 'Integrating a Kotlin Quarkus backend with a Python microservice for RAG functionality',
-        solution: 'Implemented efficient inter-service communication using gRPC and ensured data consistency across services'
-      },
-      {
-        challenge: 'Handling vector database operations for Retrieval-Augmented Generation',
-        solution: 'Utilized optimized indexing and querying techniques to manage large-scale vector embeddings efficiently'
-      },
-      {
-        challenge: 'Ensuring real-time persistence and secure connections with Firebase and Firestore',
-        solution: 'Configured Firebase authentication and Firestore listeners for seamless real-time updates and data security'
-      }
-    ],
-    demoUrl: undefined,
-    githubUrl: undefined,
-  },
+  // TO DO : update below
     {
-    id: '2',
-    title: 'Real-Time Analytics Dashboard',
-    description: 'Interactive dashboard for visualizing real-time data streams with customizable widgets and alerts.',
-    detailedDescription: 'Real-Time Analytics Dashboard to handle 40 million dollars in inventory, featuring comprehensive data visualization that displays live metrics. It uses Firebase authentication for secure user access, Firestore for real-time data storage and updates, and configurable pricing and sales modules. The dashboard includes customizable widgets, interactive charts, and alert systems for monitoring data anomalies. Dashboard is deployed to Google Cloud Platform as well as an processing and update service on Cloud Run functions, it utilizes Quarkus cache for efficient dashboard metadata caching.',
-    image: analyticsImg,
-    tags: ['React', 'Vite', 'Firebase', 'Firestore', 'Kotlin', 'Java Quarkus', 'AWS Lambda', 'GCP'],
+    id: '1',
+    title: 'Job Tracker',
+    description: 'A job tracking application that helps users manage and monitor their job applications efficiently.',
+    detailedDescription: '',
+    image: "",
+    tags: [],
     technologies: [
-      { name: 'React', description: 'Frontend library for building the user interface' },
-      { name: 'Vite SWC', description: 'Build tool for fast development and optimized production builds' },
-      { name: 'Firebase', description: 'Platform for authentication and real-time database' },
-      { name: 'Firestore', description: 'NoSQL cloud database for real-time data synchronization' },
-      { name: 'Kotlin Quarkus', description: 'Backend for dashboard service' },
-      { name: 'Quarkus Cache', description: 'Caching solution for dashboard metadata' },
-      { name: 'Java Quarkus', description: 'Microservice for item processing and updates' },
-      { name: 'Google Cloud Platform', description: 'Cloud platform for dashboard deployment and Serverless functions' }
+
 
     ],
-    features: ['Real-time data visualization', 'Customizable widgets', 'Alert system', 'Configurable pricing', 'Sales analytics', 'Multiple chart types', 'Data export', 'Efficient updates'],
+    features: [],
     challenges: [
       {
-        challenge: 'Orchestrating seamless data flow between a Kotlin-based Firebase backend and a Java Quarkus processing engine, while managing a infrastructure on GCP.',
-        solution: 'Architected a robust event-driven system using Firestore listeners and optimistic UI updates for zero-latency feel. I optimized Quarkus-level metadata caching and engineered cloud deployment pipeline that ensured data integrity and synchronization across different cloud deployments.'
+        challenge: '',
+        solution: ''
       },
       {
-        challenge: 'Scalability bottlenecks when syncing 20,000+ product updates simultaneously across multiple WooCommerce client sites.',
-        solution: 'Developed a "divide and conquer" ingestion strategy using parallel Java execution. By batch-processing updates and running client-side syncs in parallel, I significantly reduced total execution time and minimized compute costs.'
+        challenge: '',
+        solution: ''
       }
     ],
     demoUrl: undefined,
     githubUrl: undefined,
   },
-    {
-    id: '3',
-    title: 'Cozy Cookbook',
-    description: 'A full-stack web application solution with real-time recipe management, authentication, and user interactions.',
-    detailedDescription: 'Cozy Cookbook is a comprehensive recipe management platform built with modern web technologies. It features user authentication, real-time recipe sharing, and an intuitive interface for managing personal and community recipes. The application includes advanced search and filtering capabilities, user profiles, and social features for recipe interactions.',
-    image: cozyCookbookImg,
-    tags: ['React', 'Java Spring Boot', 'MongoDB', 'Tailwind CSS'],
-    technologies: [
-      { name: 'React', description: 'Frontend framework for building the user interface' },
-      { name: 'Java Spring Boot', description: 'Backend framework for API development' },
-      { name: 'MongoDB', description: 'NoSQL database for storing recipes and user data' },
-      { name: 'Tailwind CSS', description: 'Utility-first CSS framework for styling' }
-    ],
-    features: ['User authentication', 'Recipe CRUD operations', 'Real-time updates', 'Search and filtering', 'User profiles'],
-    challenges: [
-      {
-        challenge: 'Implementing real-time features with WebSockets and ensuring data consistency across multiple users',
-        solution: 'Utilized Socket.IO for WebSocket connections and implemented optimistic updates with conflict resolution to maintain data integrity'
-      }
-    ],
-    demoUrl: 'https://thecozycookbookwebui.vercel.app/',
-    githubUrl: 'https://github.com/DevBerringer/RecipeWeb/tree/setup/blake',
-  },
   {
-    id: '4',
-    title: 'Vanilla Portfolio',
-    description: 'I wanted to learn the base of web development. I created a portfolio using vanilla JavaScript, HTML, and CSS. No frameworks were used.',
-    detailedDescription: 'This vanilla JavaScript portfolio showcases fundamental web development skills without relying on any frameworks or libraries. It demonstrates proficiency in HTML5, CSS3, and vanilla JavaScript for DOM manipulation, event handling, and responsive design. The site includes sections for projects, skills, and contact information with smooth scrolling and interactive elements.',
-    image: portfolioImg,
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    id: '2',
+    title: 'Finance Tracker',
+    description: 'A comprehensive finance tracking application that helps users manage their personal finances effectively.',
+    detailedDescription: 'Developed a comprehensive finance tracking application that allows users to monitor their income, expenses, and savings. The application features intuitive dashboards, real-time data updates, and secure authentication. Users can categorize transactions, set budget goals, and generate financial reports to gain insights into their spending habits. The platform ensures data security and provides a seamless user experience across devices.',
+    image: "",
+    tags: ['Angular', 'TypeScript', 'Java', 'Spring Boot', 'Tailwind'],
     technologies: [
-      { name: 'HTML5', description: 'Markup language for structuring the web page' },
-      { name: 'CSS3', description: 'Styling language for visual presentation' },
-      { name: 'JavaScript', description: 'Programming language for interactivity' }
+      { name: 'Angular', description: 'Frontend framework for building the user interface' },
+      { name: 'TypeScript', description: 'Programming language for frontend and backend development' },
+      { name: 'Java', description: 'Programming language for backend development' },
+      { name: 'Spring Boot', description: 'Framework for building Java-based backend services' },
+      { name: 'JWT Authentication', description: 'Implementation of JSON Web Token based authentication for secure user sessions' },
+      { name: 'PostgreSQL', description: 'Relational database for storing application data' },
+      { name: 'SCSS', description: 'Sass-based CSS preprocessor for styling' }
     ],
-    features: ['Responsive design', 'Smooth scrolling navigation', 'JavaScript typing animations', 'Contact form (Disabled)', 'Skills showcase', 'Past Projects'],
-    challenges: [
+    features: ['Track income and expenses', 'Set budget goals', 'Category-based spending visualization', 'Real-time data updates', 'Secure authentication', 'Intuitive dashboards', 'User Profiles'],
+    challenges: 
+    [
       {
-        challenge: 'Creating responsive layouts and smooth animations without CSS frameworks or JavaScript libraries',
-        solution: 'Implemented custom CSS Grid and Flexbox layouts with media queries, and used vanilla JavaScript for scroll, animations and transitions'
+        challenge: 'Implementing secure JWT authentication with per-user data isolation, ensuring users could only access their own transactions.',
+        solution: 'Built a custom JWT filter in Spring Security that validates tokens on every request and injects the authenticated user into the security context. Linked transactions to users via a foreign key and filtered all queries by the authenticated user\'s ID at the repository level.'
+      },
+      {
+        challenge: 'Configuring CORS and environment-specific database connections when deploying the Spring Boot backend to Railway, including Java version mismatches and malformed JDBC connection strings.',
+        solution: 'Diagnosed build logs to identify the correct Java version required by Railway\'s Nixpacks builder, then used Railway\'s variable reference syntax to correctly inject PostgreSQL connection details rather than passing unresolved placeholder strings to the JDBC driver.'
+      },
+      {
+        challenge: 'Angular\'s client-side routing returned 404 errors on Netlify when users navigated directly to routes like /register.',
+        solution: 'Added a Netlify redirect rule to serve index.html for all paths, allowing Angular\'s router to handle navigation client-side instead of Netlify\'s server trying to resolve the route.'
       }
     ],
-    demoUrl: 'https://blakeberringer.vercel.app/',
-    githubUrl: 'https://github.com/DevBerringer/Portfolio/tree/main',
+    demoUrl: 'https://finance-tracker-heidi.netlify.app',
+    githubUrl: 'https://github.com/hmailahn/finance-tracker',
   },
+  // TO DO, add more projects
+  //   {
+  //   id: '3',
+  //   title: 'Cozy Cookbook',
+  //   description: 'A full-stack web application solution with real-time recipe management, authentication, and user interactions.',
+  //   detailedDescription: 'Cozy Cookbook is a comprehensive recipe management platform built with modern web technologies. It features user authentication, real-time recipe sharing, and an intuitive interface for managing personal and community recipes. The application includes advanced search and filtering capabilities, user profiles, and social features for recipe interactions.',
+  //   image: "cozyCookbookImg",
+  //   tags: ['React', 'Java Spring Boot', 'MongoDB', 'Tailwind CSS'],
+  //   technologies: [
+  //     { name: 'React', description: 'Frontend framework for building the user interface' },
+  //     { name: 'Java Spring Boot', description: 'Backend framework for API development' },
+  //     { name: 'MongoDB', description: 'NoSQL database for storing recipes and user data' },
+  //     { name: 'Tailwind CSS', description: 'Utility-first CSS framework for styling' }
+  //   ],
+  //   features: ['User authentication', 'Recipe CRUD operations', 'Real-time updates', 'Search and filtering', 'User profiles'],
+  //   challenges: [
+  //     {
+  //       challenge: 'Implementing real-time features with WebSockets and ensuring data consistency across multiple users',
+  //       solution: 'Utilized Socket.IO for WebSocket connections and implemented optimistic updates with conflict resolution to maintain data integrity'
+  //     }
+  //   ],
+  //   demoUrl: 'https://thecozycookbookwebui.vercel.app/',
+  //   githubUrl: 'https://github.com/DevBerringer/RecipeWeb/tree/setup/blake',
+  // },
+  // {
+  //   id: '4',
+  //   title: 'Vanilla Portfolio',
+  //   description: 'I wanted to learn the base of web development. I created a portfolio using vanilla JavaScript, HTML, and CSS. No frameworks were used.',
+  //   detailedDescription: 'This vanilla JavaScript portfolio showcases fundamental web development skills without relying on any frameworks or libraries. It demonstrates proficiency in HTML5, CSS3, and vanilla JavaScript for DOM manipulation, event handling, and responsive design. The site includes sections for projects, skills, and contact information with smooth scrolling and interactive elements.',
+  //   image: "portfolioImg",
+  //   tags: ['HTML', 'CSS', 'JavaScript'],
+  //   technologies: [
+  //     { name: 'HTML5', description: 'Markup language for structuring the web page' },
+  //     { name: 'CSS3', description: 'Styling language for visual presentation' },
+  //     { name: 'JavaScript', description: 'Programming language for interactivity' }
+  //   ],
+  //   features: ['Responsive design', 'Smooth scrolling navigation', 'JavaScript typing animations', 'Contact form (Disabled)', 'Skills showcase', 'Past Projects'],
+  //   challenges: [
+  //     {
+  //       challenge: 'Creating responsive layouts and smooth animations without CSS frameworks or JavaScript libraries',
+  //       solution: 'Implemented custom CSS Grid and Flexbox layouts with media queries, and used vanilla JavaScript for scroll, animations and transitions'
+  //     }
+  //   ],
+  //   demoUrl: 'https://blakeberringer.vercel.app/',
+  //   githubUrl: 'https://github.com/DevBerringer/Portfolio/tree/main',
+  // },
 ];
 
+// this is done
 export const skills: Skill[] = [
   { name: 'Vue', category: 'frontend' },
   { name: 'TypeScript', category: 'frontend' },
@@ -135,7 +126,7 @@ export const skills: Skill[] = [
   { name: 'Java', category: 'backend' },
   { name: 'Spring boot', category: 'backend' },
   { name: 'Python', category: 'backend' },
-  //mysql?
+  { name: 'MySQL', category: 'backend' },
   { name: 'PostgreSQL', category: 'backend' },
   { name: 'MongoDB', category: 'backend' },
   { name: 'Git', category: 'cloud tools' },
@@ -149,10 +140,11 @@ export const skills: Skill[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: 'GitHub', url: 'https://github.com/DevBerringer', icon: 'github' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/blake-berringer-35126a105', icon: 'linkedin' }
+  { name: 'GitHub', url: 'https://github.com/hmailahn', icon: 'github' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/heidi-mailahn-15005a136', icon: 'linkedin' }
 ];
 
+// TO DO: change tagline, and about
 export const personalInfo = {
   name: 'Heidi Mailahn',
   title: 'Full Stack Developer',
@@ -166,11 +158,12 @@ export const personalInfo = {
 
   I’m an advocate for clean code and better developer experiences. If I'm not in my IDE, I'm likely exploring new ideas or reading up on something outside of my domain.`,
   email: 'mailahnheidi@gmail.com',
-  location: 'Omaha, NE',
+  location: 'Council Bluffs',
   availability: 'Available for Full Stack & Frontend roles',
 };
 
 export const experience: ExperienceItem[] = [
+  // TO DO: add more work here, need to also add dare to surpass to resume
   {
     id: 'rp',
     type: 'work',
@@ -179,8 +172,9 @@ export const experience: ExperienceItem[] = [
     location: 'Remote, PA',
     start: 'June 2022',
     end: 'Present',
-    startDate: '2022-06',
+    startDate: '2022-07',
     endDate: null,
+    // TODO get logo, update logo, update description, detials, and skills
     // logo: rampHealthLogo,
     // url: 'https://www.gm.com',
     // description: 'Led event-driven platform work for vehicle data systems, re-architecting pipelines and building microservices and integrations that improved throughput and enabled ML-driven distribution and forecasting.',
@@ -202,6 +196,7 @@ export const experience: ExperienceItem[] = [
     end: 'Aug 2021',
     startDate: '2021-06',
     endDate: '2021-08',
+     // TODO get logo, update logo, update description, detials, and skills
     // logo: dareToSurpassLogo,
     // url: 'https://www.astecindustries.com/',
     // description: 'Short-term contract focused on telematics reliability improvements and rapid delivery of a DOT-compliant electronic ticketing application.',
@@ -222,9 +217,9 @@ export const experience: ExperienceItem[] = [
     startDate: '2021-12',
     endDate: '2022-05',
     description: 'Full Stack Web Development Certificate',
+    // TO DO: add some projects
     projects: [
-      // { name: 'T9 Predictive text', url: 'https://github.com/DevBerringer/T9-predictive-text' },
-      // { name: 'Senior Capstone', url: 'https://github.com/DevBerringer/Epidemic_Simulator' }
+     
     ]
   }
 ];

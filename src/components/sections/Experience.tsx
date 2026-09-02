@@ -105,9 +105,9 @@ export default function Experience() {
                 organization: 'Future Role',
                 title: 'Senior Engineer',
                 location: 'Tech Hub',
-                start: '2025',
+                start: '2027',
                 end: 'Future',
-                startDate: '2025-01-01',
+                startDate: '2027-01-01',
                 description: 'Continuing to build scalable solutions and mentor others.',
                 skills: ['Architecture', 'Leadership']
             }
@@ -134,9 +134,9 @@ export default function Experience() {
                 organization: 'Future Role',
                 title: 'Staff Engineer',
                 location: 'Global',
-                start: '2026',
+                start: '2028',
                 end: '',
-                startDate: '2026-01-01',
+                startDate: '2028-01-01',
                 description: 'Driving technical strategy and cross-team architecture.',
                 skills: ['Strategy', 'System Design']
             }
