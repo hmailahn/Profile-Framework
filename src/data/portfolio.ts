@@ -199,7 +199,7 @@ export const personalInfo = {
   title: "Full Stack Developer",
   tagline:
     "Problem solver, builder, collaborator — I like owning a project from idea to production",
-  about: `I'm a full-stack engineer at Ramp Health, building member-facing features for a wellness platform reaching 20,000+ people a month — everything from PHP/Laravel backends to responsive UI across web and mobile.
+  about: `I'm a full-stack engineer at Ramp Health, building member-facing features for a wellness platform reaching 50,000+ people a month — everything from PHP/Laravel backends to responsive UI across web and mobile.
 
     My path here wasn't traditional — years in corporate wellness program design, alongside part-time service in the Iowa Air National Guard, before a coding bootcamp turned into a full career change.
 
@@ -223,9 +223,9 @@ export const experience: ExperienceItem[] = [
     logo: RHLogo,
     url: "https://www.ramphealth.com",
     description:
-      " Full-stack engineer building member-facing wellness features for a platform serving 20,000+ members monthly across multiple enterprise clients.",
+      " Full-stack engineer building member-facing wellness features for a platform serving 50,000+ members monthly across multiple enterprise clients.",
     details: [
-      "Engineered features and resolved 250+ bugs on a platform reaching 20,000+ members monthly",
+      "Engineered features and resolved 250+ bugs on a platform reaching 50,000+ members monthly",
       "Delivered end-to-end features including a team-based Challenges system, Engagement Campaigns, and Provider Follow-up Reminders",
       "Led a Laravel 12 framework upgrade while maintaining backend reliability with PHP, Laravel, MySQL, and Redis",
       "Designed complex data models for provider assignment management, vaccine logging, dependent onboarding, and member consent flows",
