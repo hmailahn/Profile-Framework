@@ -178,7 +178,6 @@ export const skills: Skill[] = [
   { name: "PostgreSQL", category: "backend" },
   { name: "MongoDB", category: "backend" },
   { name: "Git", category: "cloud tools" },
-  { name: "GitHub Actions", category: "cloud tools" },
   { name: "Docker", category: "cloud tools" },
   { name: "Anthropic Claude", category: "AI" },
   { name: "Amazon Bedrock", category: "AI" },

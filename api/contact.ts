@@ -41,11 +41,6 @@ export default async function handler(
       console.error('RESEND_FROM_EMAIL is not set');
       return res.status(500).json({ error: 'Server configuration error' });
     }
-    console.log('Environment variables are set correctly');
-    console.log('RESEND_API_KEY:', process.env.RESEND_API_KEY);
-    console.log('CONTACT_RECEIVER_EMAIL:', process.env.CONTACT_RECEIVER_EMAIL);
-    console.log('RESEND_FROM_EMAIL:', process.env.RESEND_FROM_EMAIL);
-
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: `Portfolio Contact <${process.env.RESEND_FROM_EMAIL}>`,
