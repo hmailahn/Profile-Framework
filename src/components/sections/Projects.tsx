@@ -180,7 +180,7 @@ export default function Projects() {
         {/* View More Button */}
         <div className="text-center">
           <a
-            href="https://github.com/DevBerringer"
+            href="https://github.com/hmailahn"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 rounded-full font-medium hover:bg-primary-600 hover:text-white transition-colors hover:scale-105 active:scale-95 duration-200"
